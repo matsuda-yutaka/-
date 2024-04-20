@@ -7,28 +7,31 @@
     </head>
     <body>
         <script type="text/javascript">
+            console.log(1);
             function toOneDimension(previousValue, currentValue) {
-            return previousValue.concat(currentValue);
+                console.log(2);
+                return previousValue.concat(currentValue);
+                console.log(3);
             }
+            console.log(4);
 
             var sampleArrayA = [
                 ['A1','A2','A3'],
                 ['B1','B2','B3'],
                 ['C1','C2','C3']
             ];
+            console.log(5);
 
-            var sampleArrayB = sampleArrayA.reduceRight(toOneDimension);
+            var sampleArrayB = sampleArrayA.reduce(toOneDimension);
+            console.log(6);
+
             for(var counterVar =0; counterVar < sampleArrayB.length; counterVar++) {
+                console.log(7);
                 document.write('sampleArrayB[' +counterVar +']:');
-                
-                console.log('手順1完了 '+'sampleArrayB[' +counterVar +']:');
-                
                 document.write(sampleArrayB[counterVar]);
-                
-                console.log('手順2完了 '+sampleArrayB[counterVar]);
-                
                 document.write('<br/>');      
             }                       
+            console.log(8);
         </script>
     </body>
 </html>
